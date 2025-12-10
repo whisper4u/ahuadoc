@@ -22,66 +22,89 @@
 
     /* 针对移动端设备的样式调整 */
 
-/* 针对移动端，强制增大汉堡菜单按钮的点击区域和视觉大小 */
-@media screen and (max-width: 768px) {
-  /* 针对按钮容器 */
-  .sidebar-toggle,
-  button.sidebar-toggle {
-    padding: 20px !important; /* 大幅增加内边距，扩大热区 */
-    width: 60px !important;
-    height: 60px !important;
-    min-width: 50px !important; /* 确保最小尺寸 */
-    min-height: 50px !important;
-    background: #42b983 !important; /* 添加浅色背景使其更显眼 */
-    border-radius: 8px !important; /* 圆角 */
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
+    /* 针对移动端，强制增大汉堡菜单按钮的点击区域和视觉大小 */
+    @media screen and (max-width: 768px) {
 
-  /* 针对按钮内部的三条横线（如果是span元素） */
-  .sidebar-toggle span,
-  button.sidebar-toggle span {
-    display: block !important;
-    width: 28px !important; /* 加长横线 */
-    height: 4px !important; /* 加粗横线 */
-    margin: 3px 0 !important; /* 调整横线间距 */
-    background-color: #333 !important; /* 设置深色，更醒目 */
-    border-radius: 2px !important;
-  }
+      /* 针对按钮容器 */
+      .sidebar-toggle,
+      button.sidebar-toggle {
+        padding: 20px !important;
+        /* 大幅增加内边距，扩大热区 */
+        width: 60px !important;
+        height: 60px !important;
+        min-width: 50px !important;
+        /* 确保最小尺寸 */
+        min-height: 50px !important;
+        background: #42b983 !important;
+        /* 添加浅色背景使其更显眼 */
+        border-radius: 8px !important;
+        /* 圆角 */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
 
-  /* 如果横线是由伪元素绘制的（参考汉堡菜单的常见CSS绘制方法[6](@ref)） */
-  .sidebar-toggle::before,
-  .sidebar-toggle::after,
-  .sidebar-toggle span::before {
-    height: 4px !important; /* 加粗 */
-    width: 28px !important; /* 加长 */
-    background-color: #333 !important;
-  }
-  .sidebar-toggle::before {
-    top: 16px !important; /* 调整上横线位置 */
-  }
-  .sidebar-toggle::after {
-    bottom: 16px !important; /* 调整下横线位置 */
-  }
-}
+      /* 针对按钮内部的三条横线（如果是span元素） */
+      .sidebar-toggle span,
+      button.sidebar-toggle span {
+        display: block !important;
+        width: 28px !important;
+        /* 加长横线 */
+        height: 4px !important;
+        /* 加粗横线 */
+        margin: 3px 0 !important;
+        /* 调整横线间距 */
+        background-color: #333 !important;
+        /* 设置深色，更醒目 */
+        border-radius: 2px !important;
+      }
 
+      /* 如果横线是由伪元素绘制的（参考汉堡菜单的常见CSS绘制方法[6](@ref)） */
+      .sidebar-toggle::before,
+      .sidebar-toggle::after,
+      .sidebar-toggle span::before {
+        height: 4px !important;
+        /* 加粗 */
+        width: 28px !important;
+        /* 加长 */
+        background-color: #333 !important;
+      }
 
+      .sidebar-toggle::before {
+        top: 16px !important;
+        /* 调整上横线位置 */
+      }
 
+      .sidebar-toggle::after {
+        bottom: 16px !important;
+        /* 调整下横线位置 */
+      }
+
+      /* 正文边距 */
+      .markdown-section {
+        padding: 20px 15px !important;
+        /* 上下的20px可以按需调整，左右的15px是关键 */
+        max-width: 100% !important;
+        /* 移除最大宽度限制，让内容区域变宽 */
+        margin: 0 auto !important;
+        /* 保持内容居中 */
+      }
+    }
   </style>
 </head>
 
 <body>
   <div id="app">加载中，请稍后</div>
-  <script>
-
-
-  </script>
   <!-- Docsify v4 -->
+  <script>
+    window.$docsify = {
+      name: '阿花数码玩机手册',
+      // ... 其他配置项
+    }
+  </script>
   <script src="./docsify.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-
+  <script src="https://cdn.bootcdn.net/ajax/libs/docsify/4.13.1/plugins/zoom-image.min.js"></script>
 </body>
 
 </html>
