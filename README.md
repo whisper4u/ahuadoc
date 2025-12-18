@@ -76,9 +76,10 @@
 ### 3.执行模块
 
 <details>
-<summary>Sukisu&KSU系面具点击查看操作步骤</summary>
+<summary>点击查看操作步骤</summary>
 
-![图片描述](./img\一键包/一键包使用说明（KSU）.png)
+![图片描述](./img\一键包/一键包使用说明.png)
+
 </details>
 
 # 游戏科技相关问题
