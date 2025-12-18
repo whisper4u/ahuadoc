@@ -82,6 +82,16 @@
 
 </details>
 
+ 
+
+<details>
+<summary>阿尔法&Magisk系面具有额外步骤，点击查看</summary>
+
+![图片描述](./img\一键包/阿尔法面具额外步骤.png)
+
+</details>
+
+
 
 ---
 
