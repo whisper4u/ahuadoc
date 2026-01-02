@@ -16,6 +16,92 @@
     touch-action: auto !important;
 }
 
+/* Docsify页内跳转链接按钮样式 - 精准版本 */
+.markdown-section a[href^="#"]:not(h1 a):not(h2 a):not(h3 a):not(h4 a):not(h5 a):not(h6 a):not(.anchor) {
+    /* 基础按钮样式 */
+    display: inline-block;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    border: 2px solid transparent;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 3px 6px rgba(76, 175, 80, 0.2);
+    margin: 5px 3px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 排除标题内的锚点链接 */
+.markdown-section h1 a[href^="#"],
+.markdown-section h2 a[href^="#"],
+.markdown-section h3 a[href^="#"],
+.markdown-section h4 a[href^="#"],
+.markdown-section h5 a[href^="#"],
+.markdown-section h6 a[href^="#"],
+.markdown-section .anchor {
+    all: unset !important;
+    display: inline !important;
+    padding: 0 !important;
+    background: none !important;
+    color: inherit !important;
+    text-decoration: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    cursor: text !important;
+}
+
+/* 悬停状态效果 - 只应用于真正的跳转链接 */
+.markdown-section a[href^="#"]:not(h1 a):not(h2 a):not(h3 a):not(h4 a):not(h5 a):not(h6 a):not(.anchor):hover {
+    background: linear-gradient(135deg, #45a049 0%, #3d8b40 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(76, 175, 80, 0.3);
+    border-color: #388E3C;
+}
+
+/* 激活/点击状态 */
+.markdown-section a[href^="#"]:not(h1 a):not(h2 a):not(h3 a):not(h4 a):not(h5 a):not(h6 a):not(.anchor):active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(76, 175, 80, 0.2);
+}
+
+/* 添加跳转箭头图标 */
+.markdown-section a[href^="#"]:not(h1 a):not(h2 a):not(h3 a):not(h4 a):not(h5 a):not(h6 a):not(.anchor)::before {
+    content: '↗';
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+.markdown-section a[href^="#"]:not(h1 a):not(h2 a):not(h3 a):not(h4 a):not(h5 a):not(h6 a):not(.anchor):hover::before {
+    transform: translate(2px, -2px);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .markdown-section a[href^="#"]:not(h1 a):not(h2 a):not(h3 a):not(h4 a):not(h5 a):not(h6 a):not(.anchor) {
+        padding: 10px 14px;
+        font-size: 13px;
+        display: block;
+        margin: 8px 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .markdown-section a[href^="#"]:not(h1 a):not(h2 a):not(h3 a):not(h4 a):not(h5 a):not(h6 a):not(.anchor)::before {
+        margin-right: 6px;
+        font-size: 12px;
+    }
+}
+
+
 summary {
     display: inline-block;
     padding: 10px 20px;
@@ -39,6 +125,29 @@ summary:hover {
 summary:active {
     transform: translateY(0);
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* 隐藏默认的三角形指示器 */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::marker {
+    display: none;
+}
+
+/* 添加自定义的展开/收起图标 */
+summary::before {
+    content: '▶'; /* 默认显示向右的三角形 */
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+details[open] summary::before {
+    content: '▼'; /* 展开时显示向下的三角形 */
+    transform: rotate(60deg);
 }
 
     /* 调整整个内容区域（侧边栏+正文）的最大宽度 */
