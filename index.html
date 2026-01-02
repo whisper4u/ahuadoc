@@ -15,6 +15,32 @@
     html, body, #app, .markdown-section {
     touch-action: auto !important;
 }
+
+summary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* 蓝色背景，类似按钮 */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+summary:hover {
+    background-color: #0056b3; /* 悬停时变深色 */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+summary:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
     /* 调整整个内容区域（侧边栏+正文）的最大宽度 */
     .app-nav,
     .sidebar,
