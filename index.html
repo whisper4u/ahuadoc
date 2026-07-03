@@ -3,25 +3,235 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>阿花数码玩机手册</title>
+  <title>Document</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="./vue.css">
-  <link rel="stylesheet" href="./custom-theme.css">
 
   <style>
 
     html, body, #app, .markdown-section {
-      touch-action: auto !important;
-    }
+    touch-action: auto !important;
+}
 
+/* Docsify页内跳转链接按钮样式 - 精准版本 */
+.markdown-section a[href^="#"]:not(h1 a):not(h2 a):not(h3 a):not(h4 a):not(h5 a):not(h6 a):not(.anchor) {
+    /* 基础按钮样式 */
+    display: inline-block;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    border: 2px solid transparent;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 3px 6px rgba(76, 175, 80, 0.2);
+    margin: 5px 3px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 排除标题内的锚点链接 */
+.markdown-section h1 a[href^="#"],
+.markdown-section h2 a[href^="#"],
+.markdown-section h3 a[href^="#"],
+.markdown-section h4 a[href^="#"],
+.markdown-section h5 a[href^="#"],
+.markdown-section h6 a[href^="#"],
+.markdown-section .anchor {
+    all: unset !important;
+    display: inline !important;
+    padding: 0 !important;
+    background: none !important;
+    color: inherit !important;
+    text-decoration: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    cursor: text !important;
+}
+
+/* 悬停状态效果 - 只应用于真正的跳转链接 */
+.markdown-section a[href^="#"]:not(h1 a):not(h2 a):not(h3 a):not(h4 a):not(h5 a):not(h6 a):not(.anchor):hover {
+    background: linear-gradient(135deg, #45a049 0%, #3d8b40 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(76, 175, 80, 0.3);
+    border-color: #388E3C;
+}
+
+/* 激活/点击状态 */
+.markdown-section a[href^="#"]:not(h1 a):not(h2 a):not(h3 a):not(h4 a):not(h5 a):not(h6 a):not(.anchor):active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(76, 175, 80, 0.2);
+}
+
+/* 添加跳转箭头图标 */
+.markdown-section a[href^="#"]:not(h1 a):not(h2 a):not(h3 a):not(h4 a):not(h5 a):not(h6 a):not(.anchor)::before {
+    content: '↗';
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+.markdown-section a[href^="#"]:not(h1 a):not(h2 a):not(h3 a):not(h4 a):not(h5 a):not(h6 a):not(.anchor):hover::before {
+    transform: translate(2px, -2px);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .markdown-section a[href^="#"]:not(h1 a):not(h2 a):not(h3 a):not(h4 a):not(h5 a):not(h6 a):not(.anchor) {
+        padding: 10px 14px;
+        font-size: 13px;
+        display: block;
+        margin: 8px 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .markdown-section a[href^="#"]:not(h1 a):not(h2 a):not(h3 a):not(h4 a):not(h5 a):not(h6 a):not(.anchor)::before {
+        margin-right: 6px;
+        font-size: 12px;
+    }
+}
+
+
+summary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* 蓝色背景，类似按钮 */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+summary:hover {
+    background-color: #0056b3; /* 悬停时变深色 */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+summary:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* 隐藏默认的三角形指示器 */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::marker {
+    display: none;
+}
+
+/* 添加自定义的展开/收起图标 */
+summary::before {
+    content: '▶'; /* 默认显示向右的三角形 */
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+details[open] summary::before {
+    content: '▼'; /* 展开时显示向下的三角形 */
+    transform: rotate(60deg);
+}
+
+    /* 调整整个内容区域（侧边栏+正文）的最大宽度 */
     .app-nav,
     .sidebar,
     .content {
       max-width: 90%;
+      /* 例如，从默认的100%调整为90% */
       margin: 0 auto;
+      /* 保持居中 */
+    }
+
+    /* 针对移动端设备的样式调整 */
+
+    /* 针对移动端，强制增大汉堡菜单按钮的点击区域和视觉大小 */
+    @media screen and (max-width: 768px) {
+
+      /* 针对按钮容器 */
+      .sidebar-toggle,
+      button.sidebar-toggle {
+        padding: 20px !important;
+        /* 大幅增加内边距，扩大热区 */
+        width: 60px !important;
+        height: 60px !important;
+        min-width: 50px !important;
+        /* 确保最小尺寸 */
+        min-height: 50px !important;
+        background: #42b983 !important;
+        /* 添加浅色背景使其更显眼 */
+        border-radius: 8px !important;
+        /* 圆角 */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+
+      /* 针对按钮内部的三条横线（如果是span元素） */
+      .sidebar-toggle span,
+      button.sidebar-toggle span {
+        display: block !important;
+        width: 28px !important;
+        /* 加长横线 */
+        height: 4px !important;
+        /* 加粗横线 */
+        margin: 3px 0 !important;
+        /* 调整横线间距 */
+        background-color: #333 !important;
+        /* 设置深色，更醒目 */
+        border-radius: 2px !important;
+      }
+
+      /* 如果横线是由伪元素绘制的（参考汉堡菜单的常见CSS绘制方法[6](@ref)） */
+      .sidebar-toggle::before,
+      .sidebar-toggle::after,
+      .sidebar-toggle span::before {
+        height: 4px !important;
+        /* 加粗 */
+        width: 28px !important;
+        /* 加长 */
+        background-color: #333 !important;
+      }
+
+      .sidebar-toggle::before {
+        top: 16px !important;
+        /* 调整上横线位置 */
+      }
+
+      .sidebar-toggle::after {
+        bottom: 16px !important;
+        /* 调整下横线位置 */
+      }
+
+      /* 正文边距 */
+      .markdown-section {
+        padding: 20px 15px !important;
+        /* 上下的20px可以按需调整，左右的15px是关键 */
+        max-width: 100% !important;
+        /* 移除最大宽度限制，让内容区域变宽 */
+        margin: 0 auto !important;
+        /* 保持内容居中 */
+      }
+
+ 
     }
   </style>
 </head>
@@ -30,11 +240,10 @@
   <div id="app">加载中，请稍后</div>
   <!-- Docsify v4 -->
   <script>
-   window.$docsify = {
-     name: '阿花数码玩机手册',
-      maxLevel: 2,
-      autoHeader: false,
-      loadSidebar: false
+    window.$docsify = {
+      name: '阿花数码玩机手册',
+      maxLevel: 2
+      // ... 其他配置项
     }
 
   </script>
