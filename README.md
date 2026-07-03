@@ -1,3 +1,22 @@
+<div class="hero-section">
+  <div class="hero-card hero-intro-card">
+    <div class="hero-title">阿花数码玩机手册</div>
+    <div class="hero-subtitle">Root 问题解决方案手册</div>
+    <blockquote><p>本站主要提供 Root 后出现各种问题的解决方案，<strong>不是</strong> Root 刷机解锁教程！</p></blockquote>
+    <p class="hero-contact-line">购买 Root 机、解锁刷机、Root、救砖、维修、过环境等可联系作者</p>
+    <p class="hero-contact-line"><strong>阿花数码 QQ/VX 同号：6934489    （微信不回消息就是被封了）</strong></p>
+  </div>
+  <div class="hero-card hero-qrcode-card">
+    <div class="qrcode-title">网盘资源</div>
+    <p class="qrcode-desc">【夸克】App扫码访问，内有一键过环境包、环境修复清理工具、改机型模块等资源</p>
+    <img src="./img/quark.png" loading="lazy" alt="夸克网盘二维码">
+    <a href="https://pan.quark.cn/s/b4f00dec1bca" class="hero-btn" target="_blank">点此下载</a>
+  </div>
+</div>
+
+<div class="hero-nav-hint">
+  点击左下角【三条杠】图标打开目录，里面有新手教程、环境异常修复、游戏检测等问题分类查看
+</div>
 
 
 
