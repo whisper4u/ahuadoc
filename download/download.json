@@ -1,7 +1,54 @@
-[
-  {
-    "name": "ksu_5",
-    "fileName": "ksu_5.zip",
-    "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/ksu_5.zip"
+
+{
+  "modules": [
+    {
+      "id": "magisk_android11",
+      "name": "magisk_11",
+      "rootManager": "magisk",
+      "condition": "android_version",
+      "operator": "<=",
+      "version": 30,
+      "fileName": "magisk_11.zip",
+      "url": "https://your-storage.r2.dev/magisk_11.zip",
+      "enabled": false
+    },
+    {
+      "id": "magisk_android12",
+      "name": "magisk_12",
+      "rootManager": "magisk",
+      "condition": "android_version",
+      "operator": ">=",
+      "version": 31,
+      "fileName": "magisk_12.zip",
+      "url": "https://your-storage.r2.dev/magisk_12.zip",
+      "enabled": false
+    },
+    {
+      "id": "ksu_kernel_old",
+      "name": "ksu_4",
+      "rootManager": "kernelsu",
+      "condition": "kernel_version",
+      "operator": "<",
+      "version": "5.10",
+      "fileName": "ksu_4.zip",
+      "url": "https://your-storage.r2.dev/ksu_4.zip",
+      "enabled": false
+    },
+    {
+      "id": "ksu_kernel_new",
+      "name": "ksu_5",
+      "rootManager": "kernelsu",
+      "condition": "kernel_version",
+      "operator": ">=",
+      "version": "5.10",
+      "fileName": "ksu_5.zip",
+      "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/ksu_5.zip",
+      "enabled": true
+    }
+  ],
+
+  "trickyStore": {
+    "keyboxUrl": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/keybox.xml",
+    "description": "用于通过 Google Play Integrity 设备认证"
   }
-]   
+}
