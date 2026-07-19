@@ -5,15 +5,16 @@
     <p class="hero-contact-line">购买 Root 机、解锁刷机、Root、救砖、维修、过环境等可联系作者</p>
     <p class="hero-contact-line"><strong>阿花数码 QQ/VX 同号：6934489    （微信不回消息就是被封了）</strong></p>
   </div>
+    <div class="hero-nav-hint">
+    点击左下角【三条杠】图标打开目录，里面有新手教程、环境异常修复、游戏检测等问题分类查看
+  </div>
   <div class="hero-card hero-qrcode-card">
     <div class="qrcode-title">网盘资源</div>
     <p class="qrcode-desc">【夸克】App扫码访问，内有一键过环境包、环境修复清理工具、改机型模块等资源</p>
     <img src="./img/quark.png" loading="lazy" alt="夸克网盘二维码">
     <a href="https://pan.quark.cn/s/b4f00dec1bca" class="hero-btn" target="_blank">点此下载</a>
   </div>
-  <div class="hero-nav-hint">
-    点击左下角【三条杠】图标打开目录，里面有新手教程、环境异常修复、游戏检测等问题分类查看
-  </div>
+
 </div>
 
 
@@ -125,6 +126,11 @@ USB调试：启用开发者后，在设置里搜索"usb调试"或“开发者”
 
 **所有号称100%防封的机器都是骗子！！！**
 
+
+## 关于黑机 ##
+
+### 什么是黑机 ###
+游戏在检测到你的设备异常时（如找到了科技文件，或发现了在游戏认为的违规软件、文件等），会标记你的设备，同时会提醒你清理违规的软件和文件，如果不清理这些违规的东西，登任何账号都会弹出提示不让登游戏，如图
 
 
 ---
