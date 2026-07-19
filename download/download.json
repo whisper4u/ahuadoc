@@ -1,4 +1,3 @@
-
 {
   "modules": [
     {
@@ -9,8 +8,8 @@
       "operator": "<=",
       "version": 30,
       "fileName": "magisk_11.zip",
-      "url": "https://your-storage.r2.dev/magisk_11.zip",
-      "enabled": false
+      "url": "https://your-cdn.com/magisk_11.zip",
+      "enabled": true
     },
     {
       "id": "magisk_android12",
@@ -20,8 +19,8 @@
       "operator": ">=",
       "version": 31,
       "fileName": "magisk_12.zip",
-      "url": "https://your-storage.r2.dev/magisk_12.zip",
-      "enabled": false
+      "url": "https://your-cdn.com/magisk_12.zip",
+      "enabled": true
     },
     {
       "id": "ksu_kernel_old",
@@ -31,8 +30,8 @@
       "operator": "<",
       "version": "5.10",
       "fileName": "ksu_4.zip",
-      "url": "https://your-storage.r2.dev/ksu_4.zip",
-      "enabled": false
+      "url": "https://your-cdn.com/ksu_4.zip",
+      "enabled": true
     },
     {
       "id": "ksu_kernel_new",
@@ -46,9 +45,22 @@
       "enabled": true
     }
   ],
-
   "trickyStore": {
     "keyboxUrl": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/keybox.xml",
     "description": "用于通过 Google Play Integrity 设备认证"
-  }
+  },
+  "susfsModules": [
+    {
+      "name": "susfs 主模块",
+      "fileName": "susfs.zip",
+      "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/susfs.zip",
+      "enabled": true
+    },
+    {
+      "name": "susfs 配置模块",
+      "fileName": "susfs_config.zip",
+      "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/susfs_config.zip",
+      "enabled": true
+    }
+  ]
 }
