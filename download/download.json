@@ -8,7 +8,7 @@
       "operator": "<=",
       "version": 30,
       "fileName": "magisk_11.zip",
-      "url": "https://your-cdn.com/magisk_11.zip",
+      "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/magisk_11.zip",
       "enabled": true
     },
     {
@@ -19,7 +19,7 @@
       "operator": ">=",
       "version": 31,
       "fileName": "magisk_12.zip",
-      "url": "https://your-cdn.com/magisk_12.zip",
+      "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/magisk_12.zip",
       "enabled": true
     },
     {
@@ -30,7 +30,7 @@
       "operator": "<",
       "version": "5.10",
       "fileName": "ksu_4.zip",
-      "url": "https://your-cdn.com/ksu_4.zip",
+      "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/ksu_4.zip",
       "enabled": true
     },
     {
@@ -62,5 +62,11 @@
       "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/susfs_config.zip",
       "enabled": true
     }
-  ]
+  ],
+  "hmaOssModule": {
+    "name": "HMA-OSS (隐藏应用列表)",
+    "fileName": "hma-oss.zip",
+    "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/hma-oss.zip",
+    "enabled": true
+  }
 }
