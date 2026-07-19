@@ -68,5 +68,11 @@
     "fileName": "hma-oss.zip",
     "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/hma-oss.zip",
     "enabled": true
+  },
+  "lspModule": {
+    "name": "LSPosed (LSP)",
+    "fileName": "lsp.zip",
+    "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/lsp.zip",
+    "enabled": true
   }
 }
