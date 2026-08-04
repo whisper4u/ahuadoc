@@ -3,7 +3,7 @@
   "guardUrl": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/kernel_guard_app.apk",
   "kernels": [
     { "version": "5.10", "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/kernel_5.10" },
-    { "version": "6.1.118",  "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/kernel_test" }
+    { "version": "6.1",  "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/kernel_test" }
   ],
   "denyKernel": []
 }
