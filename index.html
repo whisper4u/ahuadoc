@@ -23,11 +23,43 @@
       max-width: 90%;
       margin: 0 auto;
     }
+
+    /* 图片点击放大：遮罩层 */
+    #img-zoom-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: none;
+    }
+    #img-zoom-overlay.show {
+      display: flex;
+    }
+    #img-zoom-overlay img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      user-select: none;
+      -webkit-user-drag: none;
+      transform-origin: center center;
+      will-change: transform;
+      touch-action: none; /* 让手势由 JS 处理，避免浏览器吞掉 */
+    }
+    /* 正文里的图片给个可点击提示光标 */
+    .markdown-section img:not(.emoji) {
+      cursor: zoom-in;
+    }
   </style>
 </head>
 
 <body>
   <div id="app">加载中，请稍后</div>
+  <!-- 图片点击放大遮罩 -->
+  <div id="img-zoom-overlay"><img alt="放大预览"></div>
   <!-- Docsify v4 -->
   <script>
    window.$docsify = {
@@ -40,6 +72,109 @@
   </script>
   <script src="./docsify.min.js"></script>
   <script src="./zoom-image.min.js"></script>
+  <script>
+    (function () {
+      var overlay = document.getElementById('img-zoom-overlay');
+      var overlayImg = overlay.querySelector('img');
+
+      // 缩放/平移状态
+      var scale = 1, tx = 0, ty = 0;
+      var pointers = {};        // 当前活动的触点
+      var startDist = 0, startScale = 1;
+      var lastX = 0, lastY = 0; // 单指拖动起点
+      var startTx = 0, startTy = 0;
+
+      function applyTransform() {
+        overlayImg.style.transform =
+          'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+      }
+      function resetTransform() {
+        scale = 1; tx = 0; ty = 0;
+        overlayImg.style.transform = '';
+      }
+
+      function openZoom(src) {
+        overlayImg.src = src;
+        resetTransform();
+        overlay.classList.add('show');
+      }
+      function closeZoom() {
+        overlay.classList.remove('show');
+        overlayImg.src = '';
+      }
+
+      // 点击正文图片 -> 打开遮罩
+      document.addEventListener('click', function (e) {
+        var img = e.target;
+        if (img && img.tagName === 'IMG' && img.closest('.markdown-section') && !img.classList.contains('emoji')) {
+          e.preventDefault();
+          openZoom(img.currentSrc || img.src);
+        }
+      });
+
+      // 双击切换 1x / 2.5x
+      overlayImg.addEventListener('dblclick', function (e) {
+        e.preventDefault();
+        if (scale > 1.05) { resetTransform(); }
+        else { scale = 2.5; tx = 0; ty = 0; applyTransform(); }
+      });
+
+      // 指针事件：统一处理双指缩放 + 单指拖动（移动端/桌面都支持）
+      overlayImg.addEventListener('pointerdown', function (e) {
+        e.preventDefault();
+        pointers[e.pointerId] = { x: e.clientX, y: e.clientY };
+        overlayImg.setPointerCapture(e.pointerId);
+        var keys = Object.keys(pointers);
+        if (keys.length === 2) {
+          var p0 = pointers[keys[0]], p1 = pointers[keys[1]];
+          startDist = Math.hypot(p0.x - p1.x, p0.y - p1.y);
+          startScale = scale;
+        } else if (keys.length === 1) {
+          lastX = e.clientX; lastY = e.clientY;
+          startTx = tx; startTy = ty;
+        }
+      });
+
+      overlayImg.addEventListener('pointermove', function (e) {
+        if (!pointers[e.pointerId]) return;
+        pointers[e.pointerId] = { x: e.clientX, y: e.clientY };
+        var keys = Object.keys(pointers);
+        if (keys.length === 2) {
+          var p0 = pointers[keys[0]], p1 = pointers[keys[1]];
+          var dist = Math.hypot(p0.x - p1.x, p0.y - p1.y);
+          if (startDist > 0) {
+            var next = Math.min(Math.max(startScale * (dist / startDist), 1), 6);
+            scale = next;
+            applyTransform();
+          }
+        } else if (keys.length === 1 && scale > 1) {
+          tx = startTx + (e.clientX - lastX);
+          ty = startTy + (e.clientY - lastY);
+          applyTransform();
+        }
+      });
+
+      function endPointer(e) {
+        delete pointers[e.pointerId];
+      }
+      overlayImg.addEventListener('pointerup', endPointer);
+      overlayImg.addEventListener('pointercancel', endPointer);
+      overlayImg.addEventListener('pointerout', endPointer);
+      overlayImg.addEventListener('pointerleave', endPointer);
+
+      // 点遮罩空白（未缩放时）关闭；已缩放时点背景复位
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) {
+          if (scale > 1.05) { resetTransform(); }
+          else { closeZoom(); }
+        }
+      });
+      // ESC 关闭
+      document.addEventListener('keyup', function (e) {
+        if (e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27) closeZoom();
+      });
+    })();
+  </script>
 </body>
 
 </html>
