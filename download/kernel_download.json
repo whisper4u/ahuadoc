@@ -1,7 +1,7 @@
 {
     "appVersion": "1.1.0",
     "guardUrl": "https://links.8uid.com/d/f130946e808eb3bbd16c8faf7f61c6ce",
-    "formatCheckUrl": "http://103.236.70.18:48927/",
+    "formatCheckUrl": "http://160.202.238.49:60663",
     "kernels": [
         {
             "version": "5.10",
