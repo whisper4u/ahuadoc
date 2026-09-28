@@ -1,24 +1,338 @@
 {
-    "appVersion": "1.1.0",
-    "guardUrl": "https://links.8uid.com/d/f130946e808eb3bbd16c8faf7f61c6ce",
-    "formatCheckUrl": "http://160.202.238.49:60663",
-    "kernels": [
-        {
-            "version": "5.10",
-            "url": "https://links.8uid.com/d/51ed557812abbac72c264d487e6b024c"
+  "appVersion": "1.2.0",
+  "formatCheckUrl": "http://160.202.238.49:58530/",
+  "brands": [
+    {
+      "name": "iQOO",
+      "icon": "brand_0"
+    },
+    {
+      "name": "OPPO",
+      "icon": "brand_1"
+    },
+    {
+      "name": "vivo",
+      "icon": "brand_2"
+    },
+    {
+      "name": "一加",
+      "icon": "brand_3"
+    },
+    {
+      "name": "小米",
+      "icon": "brand_5"
+    },
+    {
+      "name": "真我",
+      "icon": "brand_6"
+    },
+    {
+      "name": "红米",
+      "icon": "brand_7"
+    },
+    {
+      "name": "联想",
+      "icon": "brand_8"
+    }
+  ],
+  "kernels": [
+    {
+      "name": "5.10-oplus-mtk-1.04",
+      "url": "https://links.8uid.com/d/4ec76cd08316aea2f9d3d51264fc0a86",
+      "md5": "",
+      "version": "5.10",
+      "androidMin": 13,
+      "androidMax": 0,
+      "brands": [
+        "OPPO",
+        "一加",
+        "真我"
+      ],
+      "cpus": [],
+      "match": {
+        "kernelVersion": "5.10",
+        "androidVersion": {
+          "op": "gte",
+          "value": 13
         },
-        {
-            "version": "6.1.118",
-            "url": "https://links.8uid.com/d/9d76c19554dedf3add6538fbca16b962"
+        "brands": [
+          "OPPO",
+          "一加",
+          "真我"
+        ],
+        "cpus": []
+      }
+    },
+    {
+      "name": "5.10-gki",
+      "url": "https://links.8uid.com/d/bc8bdb979acd2be8ca2e6749d85b58df",
+      "md5": "",
+      "version": "5.10",
+      "androidMin": 13,
+      "androidMax": 0,
+      "brands": [
+        "小米",
+        "红米",
+        "联想"
+      ],
+      "cpus": [],
+      "match": {
+        "kernelVersion": "5.10",
+        "androidVersion": {
+          "op": "gte",
+          "value": 13
         },
-        {
-            "version": "6.1.141",
-            "url": "https://links.8uid.com/d/bebf3dad85feaf519a624a4486735115"
+        "brands": [
+          "小米",
+          "红米",
+          "联想"
+        ],
+        "cpus": []
+      }
+    },
+    {
+      "name": "6.1-oplus-sm7635-16",
+      "url": "https://links.8uid.com/d/7a3a1e8e55b4c4adb698b5b9e4698db8",
+      "md5": "",
+      "version": "6.1",
+      "androidMin": 16,
+      "androidMax": 16,
+      "brands": [
+        "OPPO",
+        "真我",
+        "一加"
+      ],
+      "cpus": [
+        "sm7635"
+      ],
+      "match": {
+        "kernelVersion": "6.1",
+        "androidVersion": {
+          "op": "eq",
+          "value": 16
         },
-        {
-            "version": "6.6",
-            "url": "https://links.8uid.com/d/b4960ccf7668c61c1b4ba6e5602fd2d7"
-        }
-    ],
-    "denyKernel": []
-}                                       
+        "brands": [
+          "OPPO",
+          "真我",
+          "一加"
+        ],
+        "cpus": [
+          "sm7635"
+        ]
+      }
+    },
+    {
+      "name": "6.1-oplus-sm7675-15",
+      "url": "https://links.8uid.com/d/73016a626f5b233d3352f64c8bdf4a49",
+      "md5": "",
+      "version": "6。1",
+      "androidMin": 15,
+      "androidMax": 15,
+      "brands": [
+        "OPPO",
+        "真我",
+        "一加"
+      ],
+      "cpus": [
+        "sm7675"
+      ],
+      "match": {
+        "kernelVersion": "6。1",
+        "androidVersion": {
+          "op": "eq",
+          "value": 15
+        },
+        "brands": [
+          "OPPO",
+          "真我",
+          "一加"
+        ],
+        "cpus": [
+          "sm7675"
+        ]
+      }
+    },
+    {
+      "name": "6.1-oplus-sm7675-16",
+      "url": "https://links.8uid.com/d/b95df09d2ee77621bbaf857e4c047f4c",
+      "md5": "",
+      "version": "6.1",
+      "androidMin": 16,
+      "androidMax": 16,
+      "brands": [
+        "OPPO",
+        "真我",
+        "一加"
+      ],
+      "cpus": [
+        "sm7675"
+      ],
+      "match": {
+        "kernelVersion": "6.1",
+        "androidVersion": {
+          "op": "eq",
+          "value": 16
+        },
+        "brands": [
+          "OPPO",
+          "真我",
+          "一加"
+        ],
+        "cpus": [
+          "sm7675"
+        ]
+      }
+    },
+    {
+      "name": "6.1-oplus-sm8635-15",
+      "url": "https://links.8uid.com/d/3d36f9cff049f56ae3ec526dca63f88c",
+      "md5": "",
+      "version": "6.1",
+      "androidMin": 15,
+      "androidMax": 15,
+      "brands": [
+        "OPPO",
+        "一加",
+        "真我"
+      ],
+      "cpus": [
+        "sm8635"
+      ],
+      "match": {
+        "kernelVersion": "6.1",
+        "androidVersion": {
+          "op": "eq",
+          "value": 15
+        },
+        "brands": [
+          "OPPO",
+          "一加",
+          "真我"
+        ],
+        "cpus": [
+          "sm8635"
+        ]
+      }
+    },
+    {
+      "name": "6.1-oplus-sm8635-16",
+      "url": "https://links.8uid.com/d/774d0488350ba3ecf0081a6da65bcf3c",
+      "md5": "",
+      "version": "6.1",
+      "androidMin": 16,
+      "androidMax": 16,
+      "brands": [
+        "OPPO",
+        "真我",
+        "一加"
+      ],
+      "cpus": [
+        "sm8635"
+      ],
+      "match": {
+        "kernelVersion": "6.1",
+        "androidVersion": {
+          "op": "eq",
+          "value": 16
+        },
+        "brands": [
+          "OPPO",
+          "真我",
+          "一加"
+        ],
+        "cpus": [
+          "sm8635"
+        ]
+      }
+    },
+    {
+      "name": "6.1-oplus-sm8650-16",
+      "url": "https://links.8uid.com/d/ab812e953ae701709ccfe3f06ff7f7d9",
+      "md5": "",
+      "version": "6.1",
+      "androidMin": 16,
+      "androidMax": 16,
+      "brands": [
+        "OPPO",
+        "一加",
+        "真我"
+      ],
+      "cpus": [
+        "sm8650"
+      ],
+      "match": {
+        "kernelVersion": "6.1",
+        "androidVersion": {
+          "op": "eq",
+          "value": 16
+        },
+        "brands": [
+          "OPPO",
+          "一加",
+          "真我"
+        ],
+        "cpus": [
+          "sm8650"
+        ]
+      }
+    },
+    {
+      "name": "6.1-oplus-sm8650-15",
+      "url": "https://links.8uid.com/d/19fc828cd2a5bf1780e5b8ce69c5e93f",
+      "md5": "",
+      "version": "6.1",
+      "androidMin": 15,
+      "androidMax": 15,
+      "brands": [
+        "OPPO",
+        "一加",
+        "真我"
+      ],
+      "cpus": [
+        "sm8650"
+      ],
+      "match": {
+        "kernelVersion": "6.1",
+        "androidVersion": {
+          "op": "eq",
+          "value": 15
+        },
+        "brands": [
+          "OPPO",
+          "一加",
+          "真我"
+        ],
+        "cpus": [
+          "sm8650"
+        ]
+      }
+    }
+  ],
+  "warnings": {
+    "kernel6xWarn": {
+      "enabled": true,
+      "title": "内核版本提示",
+      "message": "当前内核为 6.1/6.6 系列。刷入防格机内核属于底层系统操作，存在变砖（格机）风险，请务必先备份重要数据，并确认你了解风险。\n\n继续即表示你已知悉风险。"
+    },
+    "incompatibleWarn": {
+      "enabled": true,
+      "title": "内核不兼容",
+      "message": "当前内核版本暂不支持安装防格机，下载按钮已禁用。若确需安装，请先切换到受支持的内核（如 5.10 / 6.1 / 6.6 系列）后重试。"
+    },
+    "backupBootAsk": {
+      "enabled": true,
+      "defaultChoice": "backup"
+    },
+    "slowDownloadWarn": {
+      "enabled": true,
+      "title": "下载速度过慢",
+      "message": "当前下载速度为 0 或过于缓慢，建议：\n\n1. 更换 WiFi 网络后重试\n2. 使用移动数据下载\n\n如仍无法下载，请稍后重试或联系客服反馈。",
+      "thresholdKbps": 50
+    },
+    "networkError": {
+      "enabled": true,
+      "title": "网络异常",
+      "message": "检测到无网络连接，或更新配置拉取失败。\n请联网后重试，或前往下载页手动获取最新版。"
+    }
+  }
+}
