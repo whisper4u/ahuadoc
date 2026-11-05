@@ -1,8 +1,8 @@
 {
-  "appVersion": "1.0.2",
+  "appVersion": "1.1.0",
   "ahuadoc": {
     "version": "1.0.0",
-    "url": "https://links.8uid.com/d/11207bd41ca86e0ec2a8b6232c3f1567"
+    "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/docs.zip"
   },
   "modules": [
     {
@@ -13,7 +13,7 @@
       "operator": "<=",
       "version": 30,
       "fileName": "magisk_11.zip",
-      "url": "https://links.8uid.com/d/eec1ec734cbde0d23795aa8831e7e686",
+      "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/magisk_11.zip",
       "enabled": true
     },
     {
@@ -24,7 +24,7 @@
       "operator": ">=",
       "version": 31,
       "fileName": "magisk_12.zip",
-      "url": "https://links.8uid.com/d/4f6b790c7578c93ca4ab64bf9f633fa0",
+      "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/magisk_12.zip",
       "enabled": true
     },
     {
@@ -35,7 +35,7 @@
       "operator": "<",
       "version": "5.10",
       "fileName": "ksu_4.zip",
-      "url": "https://links.8uid.com/d/2d481d7f78546390850e5a4f3a789d41",
+      "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/ksu_4.zip",
       "enabled": true
     },
     {
@@ -46,38 +46,38 @@
       "operator": ">=",
       "version": "5.10",
       "fileName": "ksu_5.zip",
-      "url": "https://links.8uid.com/d/63f42ac0af5d38d7e31e10ca211e4c0d",
+      "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/ksu_5.zip",
       "enabled": true
     }
   ],
   "trickyStore": {
-    "keyboxUrl": "https://links.8uid.com/d/32a4e4e64f88cae7d1ec9aeeda691c54",
+    "keyboxUrl": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/keybox.xml",
     "description": "用于通过 Google Play Integrity 设备认证"
   },
   "susfsModules": [
     {
       "name": "susfs 主模块",
       "fileName": "susfs.zip",
-      "url": "https://links.8uid.com/d/5e3766ac94b08addfa90025439fe9adf",
+      "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/susfs.zip",
       "enabled": true
     },
     {
       "name": "susfs 配置模块",
       "fileName": "susfs_config.zip",
-      "url": "https://links.8uid.com/d/80a613cc00c3e61ab803b4a7a1069e58",
+      "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/susfs_config.zip",
       "enabled": true
     }
   ],
   "hmaOssModule": {
     "name": "HMA-OSS (隐藏应用列表)",
     "fileName": "hma-oss.zip",
-    "url": "https://links.8uid.com/d/e2cfad6ba28b9089d056aa6b67f4575a",
+    "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/hma-oss.zip",
     "enabled": true
   },
   "lspModule": {
     "name": "LSPosed (LSP)",
     "fileName": "lsp.zip",
-    "url": "https://links.8uid.com/d/6cadbfeb87a83ae8120a49dc2f8da060",
+    "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/lsp.zip",
     "enabled": true
   }
 }
