@@ -1,6 +1,7 @@
 {
-  "appVersion": "1.2.0",
-  "formatCheckUrl": "http://160.202.238.49:58530/",
+  "appVersion": "1.2.1",
+  "formatCheckUrl": "http://160.202.238.49:60663/",
+  "buyCardUrl": "",
   "brands": [
     {
       "name": "iQOO",
@@ -38,21 +39,26 @@
   "kernels": [
     {
       "name": "5.10-oplus-mtk-1.04",
-      "url": "https://links.8uid.com/d/4ec76cd08316aea2f9d3d51264fc0a86",
+      "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/kernel/5.10/5.10-oplus-mtk-1.04",
       "md5": "",
       "version": "5.10",
       "androidMin": 13,
-      "androidMax": 0,
+      "androidMax": 15,
+      "androidRange": "13-15",
       "brands": [
         "OPPO",
         "一加",
         "真我"
       ],
-      "cpus": [],
+      "cpus": [
+        "mt"
+      ],
       "match": {
         "kernelVersion": "5.10",
         "androidVersion": {
-          "op": "gte",
+          "op": "range",
+          "min": 13,
+          "max": 15,
           "value": 13
         },
         "brands": [
@@ -60,16 +66,19 @@
           "一加",
           "真我"
         ],
-        "cpus": []
+        "cpus": [
+          "mt"
+        ]
       }
     },
     {
       "name": "5.10-gki",
-      "url": "https://links.8uid.com/d/bc8bdb979acd2be8ca2e6749d85b58df",
+      "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/kernel/5.10/5.10-gki",
       "md5": "",
       "version": "5.10",
       "androidMin": 13,
-      "androidMax": 0,
+      "androidMax": 15,
+      "androidRange": "13-15",
       "brands": [
         "小米",
         "红米",
@@ -79,7 +88,9 @@
       "match": {
         "kernelVersion": "5.10",
         "androidVersion": {
-          "op": "gte",
+          "op": "range",
+          "min": 13,
+          "max": 15,
           "value": 13
         },
         "brands": [
@@ -97,6 +108,7 @@
       "version": "6.1",
       "androidMin": 16,
       "androidMax": 16,
+      "androidRange": "16-16",
       "brands": [
         "OPPO",
         "真我",
@@ -109,7 +121,9 @@
         "kernelVersion": "6.1",
         "androidVersion": {
           "op": "eq",
-          "value": 16
+          "value": 16,
+          "min": 0,
+          "max": 0
         },
         "brands": [
           "OPPO",
@@ -125,9 +139,10 @@
       "name": "6.1-oplus-sm7675-15",
       "url": "https://links.8uid.com/d/73016a626f5b233d3352f64c8bdf4a49",
       "md5": "",
-      "version": "6。1",
+      "version": "6.1",
       "androidMin": 15,
       "androidMax": 15,
+      "androidRange": "15-15",
       "brands": [
         "OPPO",
         "真我",
@@ -137,10 +152,12 @@
         "sm7675"
       ],
       "match": {
-        "kernelVersion": "6。1",
+        "kernelVersion": "6.1",
         "androidVersion": {
           "op": "eq",
-          "value": 15
+          "value": 15,
+          "min": 0,
+          "max": 0
         },
         "brands": [
           "OPPO",
@@ -159,6 +176,7 @@
       "version": "6.1",
       "androidMin": 16,
       "androidMax": 16,
+      "androidRange": "16-16",
       "brands": [
         "OPPO",
         "真我",
@@ -171,7 +189,9 @@
         "kernelVersion": "6.1",
         "androidVersion": {
           "op": "eq",
-          "value": 16
+          "value": 16,
+          "min": 0,
+          "max": 0
         },
         "brands": [
           "OPPO",
@@ -190,6 +210,7 @@
       "version": "6.1",
       "androidMin": 15,
       "androidMax": 15,
+      "androidRange": "15-15",
       "brands": [
         "OPPO",
         "一加",
@@ -202,7 +223,9 @@
         "kernelVersion": "6.1",
         "androidVersion": {
           "op": "eq",
-          "value": 15
+          "value": 15,
+          "min": 0,
+          "max": 0
         },
         "brands": [
           "OPPO",
@@ -221,6 +244,7 @@
       "version": "6.1",
       "androidMin": 16,
       "androidMax": 16,
+      "androidRange": "16-16",
       "brands": [
         "OPPO",
         "真我",
@@ -233,7 +257,9 @@
         "kernelVersion": "6.1",
         "androidVersion": {
           "op": "eq",
-          "value": 16
+          "value": 16,
+          "min": 0,
+          "max": 0
         },
         "brands": [
           "OPPO",
@@ -252,6 +278,7 @@
       "version": "6.1",
       "androidMin": 16,
       "androidMax": 16,
+      "androidRange": "16-16",
       "brands": [
         "OPPO",
         "一加",
@@ -264,7 +291,9 @@
         "kernelVersion": "6.1",
         "androidVersion": {
           "op": "eq",
-          "value": 16
+          "value": 16,
+          "min": 0,
+          "max": 0
         },
         "brands": [
           "OPPO",
@@ -283,6 +312,7 @@
       "version": "6.1",
       "androidMin": 15,
       "androidMax": 15,
+      "androidRange": "15-15",
       "brands": [
         "OPPO",
         "一加",
@@ -295,7 +325,9 @@
         "kernelVersion": "6.1",
         "androidVersion": {
           "op": "eq",
-          "value": 15
+          "value": 15,
+          "min": 0,
+          "max": 0
         },
         "brands": [
           "OPPO",
@@ -304,6 +336,106 @@
         ],
         "cpus": [
           "sm8650"
+        ]
+      }
+    },
+    {
+      "name": "6.6-oplus-mt6991",
+      "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/kernel/6.6/6.6.118-mtk",
+      "md5": "",
+      "version": "6.6.118",
+      "androidMin": 16,
+      "androidMax": 16,
+      "androidRange": "16-16",
+      "brands": [
+        "OPPO",
+        "一加",
+        "真我"
+      ],
+      "cpus": [
+        "mt6991"
+      ],
+      "match": {
+        "kernelVersion": "6.6.118",
+        "androidVersion": {
+          "op": "eq",
+          "value": 16,
+          "min": 0,
+          "max": 0
+        },
+        "brands": [
+          "OPPO",
+          "一加",
+          "真我"
+        ],
+        "cpus": [
+          "mt6991"
+        ]
+      }
+    },
+    {
+      "name": "5.10-vivo-mt6983",
+      "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/kernel/5.10/5.10-vivo-mt6983",
+      "md5": "",
+      "version": "5.10",
+      "androidMin": 13,
+      "androidMax": 15,
+      "androidRange": "13-15",
+      "brands": [
+        "vivo",
+        "iQOO"
+      ],
+      "cpus": [
+        "mt6983"
+      ],
+      "match": {
+        "kernelVersion": "5.10",
+        "androidVersion": {
+          "op": "range",
+          "min": 13,
+          "max": 15,
+          "value": 13
+        },
+        "brands": [
+          "vivo",
+          "iQOO"
+        ],
+        "cpus": [
+          "mt6983"
+        ]
+      }
+    },
+    {
+      "name": "5.10-oplus-qcom",
+      "url": "https://pub-a57ecc3a69fe48c5975c61acaae67296.r2.dev/kernel/5.10/5.10-oplus-qcom",
+      "md5": "",
+      "version": "5.10",
+      "androidMin": 13,
+      "androidMax": 15,
+      "androidRange": "13-15",
+      "brands": [
+        "OPPO",
+        "真我",
+        "一加"
+      ],
+      "cpus": [
+        "sm"
+      ],
+      "match": {
+        "kernelVersion": "5.10",
+        "androidVersion": {
+          "op": "range",
+          "min": 13,
+          "max": 15,
+          "value": 13
+        },
+        "brands": [
+          "OPPO",
+          "真我",
+          "一加"
+        ],
+        "cpus": [
+          "sm"
         ]
       }
     }
